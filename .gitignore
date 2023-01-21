@@ -1,0 +1,6 @@
+/.env
+/node_modules/
+reports/**.png
+reports/**.html
+reports/**.json
+

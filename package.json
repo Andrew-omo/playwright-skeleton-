@@ -1,0 +1,30 @@
+{
+  "name": "palywright-skeleton-e2e-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test:ui:chrome": "BROWSER=chrome cucumber-js --tags '@pocDemo' --parallel 1 -f json:reports/report.json",
+    "test:with:report": "./node_modules/.bin/cucumber-js --require cucumber.js --require step-definitions/**/*.js -f json:reports/report.json --format html:./reports/cucumber_report.html --format summary --format @cucumber/pretty-formatter --no-strict --publish-quiet",
+    "smoke:test:with:report": "./node_modules/.bin/cucumber-js --require cucumber.js --require step-definitions/**/*.js --tags '@smokeTests' -f json:reports/report.json --format html:./reports/cucumber_report.html --format summary --format @cucumber/pretty-formatter --no-strict --publish-quiet",
+    "customised:cucumber:report": "node reports/customised-report.js"
+  },
+  "keywords": [
+    "playwrights",
+    "cucumber"
+  ],
+  "author": "Andrew Omo-Irogho",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@cucumber/cucumber": "^8.2.2",
+    "@cucumber/pretty-formatter": "^1.0.0-alpha.2",
+    "@playwright/test": "^1.22.2",
+    "chai": "^4.3.6",
+    "cucumber-html-reporter": "^5.5.0",
+    "dotenv": "^16.0.1",
+    "fs": "0.0.1-security",
+    "playwright": "^1.22.2",
+    "prettier": "^2.6.2",
+    "request": "^2.88.2"
+  }
+}
