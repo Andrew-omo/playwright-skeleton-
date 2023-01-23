@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test:ui:chrome": "BROWSER=chrome cucumber-js --tags '@pocDemo' --parallel 1 -f json:reports/report.json",
+    "test:ui:chrome": "BROWSER=chrome cucumber-js --tags '@smokeTests' --parallel 1 -f json:reports/report.json",
     "test:with:report": "./node_modules/.bin/cucumber-js --require cucumber.js --require step-definitions/**/*.js -f json:reports/report.json --format html:./reports/cucumber_report.html --format summary --format @cucumber/pretty-formatter --no-strict --publish-quiet",
     "smoke:test:with:report": "./node_modules/.bin/cucumber-js --require cucumber.js --require step-definitions/**/*.js --tags '@smokeTests' -f json:reports/report.json --format html:./reports/cucumber_report.html --format summary --format @cucumber/pretty-formatter --no-strict --publish-quiet",
     "customised:cucumber:report": "node reports/customised-report.js"

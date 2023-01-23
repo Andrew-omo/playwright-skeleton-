@@ -2,13 +2,11 @@
 Feature: D365 Sales page navigation
 
   Scenario: As a user I should be able to access D365 Sales pages
-    Given I am able to login to cm
+    Given I am able to login to ms d365
     And I navigate to the Accounts page
     And I should be in the account page
     And I navigate to the Contacts page
     And I should be in the contact page
-    When I navigate to the Dashboard page
-    Then I should be in the dashboard page
     And I navigate to the Calendar page
     And I should be in the appointment page
     And I navigate to the Tasks page
@@ -19,6 +17,8 @@ Feature: D365 Sales page navigation
     And I should be in the Opportunity page
     And I navigate to the Forecasts page
     And I should be in the Forecast page
-    When I navigate to the Sales accelerator page
-    Then I should be in the AcceleratedSales page 
+    And I navigate to the Sales accelerator page
+    And I should be in the AcceleratedSales page
+    When I navigate to the Dashboard page
+    And I should be in the dashboard page 
     Then The user is able to Sign out of this account 

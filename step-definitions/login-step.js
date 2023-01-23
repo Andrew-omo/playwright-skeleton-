@@ -3,18 +3,12 @@ const { LoginPage } = require('../pages/login-page')
 const loginPage = new LoginPage()
 
 //GIVENs
-Given(/^I am able to login to cm$/, async () => {
-  await loginPage.loginToCm()
-})
-
-//WHENs
-When(/^I navigate to the (.*) page$/, async (tab) => {
-  await loginPage.clickOnLabelByName(tab)
-
+Given(/^I am able to login to ms d365$/, async () => {
+  await loginPage.loginToMsDm()
 })
 
 //THENs
-Then(/^I should be in the (.*) page$/, async (page) => {
-  await loginPage.verifyPage(page)
+Then(/^The user is able to (Sign out of this account)$/, async (signOutLabel) => {
+  await loginPage.signOut(signOutLabel)
 
-})
+});

@@ -5,16 +5,16 @@ Cross-browser. Playwright supports all modern rendering engines including Chromi
 
 Cross-platform. Test on Windows, Linux, and macOS, locally or on CI, headless or headed.
 
-## Getting started
-
-The project is cloned from [__playwright-skeleton
-repo__](https://playwright-e2e-tests) on GitHub. Please follow the instructions * include URL here
-below on how to setup and run the tests
-
+## Getting started [Prerequisites]
 
 ## Register for a free trial version of Microsoft Dynamics 365 Sales Account
 
 Dynamics 365 Sales: https://dynamics.microsoft.com/en-us/sales/overview/
+
+The project is cloned from [__playwright-skeleton
+repo__](https://github.com/Andrew-omo/playwright-skeleton-.git) on GitHub. Please follow the instructions 
+below on how to setup and run the tests
+
 
 ### Set up
 

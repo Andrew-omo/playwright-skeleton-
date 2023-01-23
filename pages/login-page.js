@@ -1,4 +1,5 @@
 const CommonAction = require('../utils/common-action')
+const USER_ACCOUNT = 'Account manager for Auto Testing'
 require('dotenv').config()
 
 
@@ -10,7 +11,7 @@ const PASSWORD_INPUT = '#i0118'
 
 class LoginPage extends CommonAction {
 
-  async loginToCm() {
+  async loginToMsDm() {
     let url = `${process.env.URL}/main.aspx?appid=${process.env.APP_ID}&pagetype=dashboard&id=${process.env.ID}&type=system&_canOverride=true`
     await this.openUrl(url)
     await this.sendKeys(USER_NAME_INPUT, process.env.USER_NAME)
@@ -21,15 +22,14 @@ class LoginPage extends CommonAction {
     await this.clickOn(NEXT_BUTTON)
   }
 
-  async clickOnLabelByName(tab) {
-    await this.clickOn(`text=${tab}`)
+  async signOut(signOutLabel) {
+    await this.waitFor(3000)
+    await this.clickOn(`button[aria-label='${USER_ACCOUNT}']`)
     await this.waitForPageToLoad()
-    await this.waitFor(2000)
+    await this.clickOn(`button[aria-label='${signOutLabel}']`)
+    await this.waitForPageToLoad()
   }
 
-  async verifyPage(urlSubString) {
-    await this.pageUrlContainString(urlSubString)
-  }
 }
 
 module.exports = { LoginPage }
