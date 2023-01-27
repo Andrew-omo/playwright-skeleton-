@@ -12,7 +12,7 @@ Cross-platform. Test on Windows, Linux, and macOS, locally or on CI, headless or
 Dynamics 365 Sales: https://dynamics.microsoft.com/en-us/sales/overview/
 
 The project is cloned from [__playwright-skeleton
-repo__](https://github.com/KainosSoftwareLtd/fanda-playwright-skeleton.git) on GitHub. Please follow the instructions 
+repo__](https://github.com/Andrew-omo/playwright-skeleton-.git) on GitHub. Please follow the instructions 
 below on how to setup and run the tests
 
 
